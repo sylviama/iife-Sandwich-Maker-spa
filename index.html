@@ -1,0 +1,67 @@
+<!-- a section of options for each sandwich part
+the ability to select multiple, or zero, choices for each section (such as turkey and bacon, or "no meat")
+an empty DOM element into which the final sandwich order and its cost will be inserted -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sandwich Maker</title>
+</head>
+<body>
+  <h1>Sandwich Maker</h1>
+  <section id="choose">
+    <form onsubmit="return false" id="meat">
+      <label>Meat:</label><br>
+      <input type="checkbox" id="no_meat"><label for="no_meat">No Meat</label>
+      <input type="checkbox" id="beef"><label for="beef">Beef</label>
+      <input type="checkbox" id="bacon"><label for="bacon">Bacon</label>
+      <input type="checkbox" id="chicken"><label for="chicken">Chicken</label><br><br>
+    </form>
+
+    <form onsubmit="return false" id="bread">
+      <label>Bread:</label><br>
+      <input type="checkbox" id="italian"><label for="italian">Italian</label>
+      <input type="checkbox" id="white"><label for="white">White</label>
+      <input type="checkbox" id="wheat"><label for="wheat">Wheat</label><br><br>
+    </form>
+
+    <form onsubmit="return false" id="cheese">
+      <label>Cheese:</label><br>
+      <input type="checkbox" id="no_cheese"><label for="no_cheese">No Cheese</label>
+      <input type="checkbox" id="american"><label for="american">American</label>
+      <input type="checkbox" id="blue"><label for="blue">Blue</label>
+      <input type="checkbox" id="cheddar"><label for="cheddar">Cheddar</label><br><br>
+    </form>
+    
+    <form onsubmit="return false" id="condiments">
+      <label>Condiments:</label><br>
+      <input type="checkbox" id="no_condiments"><label for="no_condiments">No Condiments</label>
+      <input type="checkbox" id="salt"><label for="salt">Salt</label>
+      <input type="checkbox" id="pepper"><label for="pepper">Pepper</label>
+      <input type="checkbox" id="oil"><label for="oil">Olive Oil</label><br><br>
+    </form>
+
+    <form onsubmit="return false" id="vegi">
+      <label>Vegetable:</label><br>
+      <input type="checkbox" id="no_vegi"><label for="no_vegi">No Vegetable</label>
+      <input type="checkbox" id="tomato"><label for="tomato">Tomato</label>
+      <input type="checkbox" id="lettuce"><label for="lettuce">Lettuce</label>
+      <input type="checkbox" id="onion"><label for="onion">Onion</label><br><br>
+    </form>
+  </section>
+
+<button id="btn">Generate Your Order and Price</button>
+<h3>Your Final Order and Price are:</h3>
+<p><b>Your Order is: </b></p><div id="output"></div>
+<p><b>Your total Price is: </b></p><div id="price"></div>
+
+<script src="sandwichMaker.js"></script>
+<script src="meat.js"></script>
+<script src="bread.js"></script>
+<script src="cheese.js"></script>
+<script src="condiments.js"></script>
+<script src="vegi.js"></script>
+<script src="DOMhandler.js"></script>
+
+</body>
+</html>
